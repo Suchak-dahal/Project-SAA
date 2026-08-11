@@ -71,13 +71,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             {/* Top Left: Vase / Flower details */}
-            <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F4EFE6] border border-[#C5A059]/10 shadow-sm">
-              <Image
-                src="https://images.unsplash.com/photo-1502810313894-0a631d82f508?auto=format&fit=crop&w=600&q=80"
+            <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F4EFE6] border border-[#C5A059]/10 shadow-sm group">
+              <img
+                src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80"
                 alt="Gypsophila in Ceramic Vase detail"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-center group-hover:scale-102 transition-transform duration-700"
+                className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-102"
+                loading="lazy"
               />
             </div>
 
@@ -108,13 +107,12 @@ export default function AboutPage() {
             </div>
 
             {/* Bottom Right: Linen Embroidery details */}
-            <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F4EFE6] border border-[#C5A059]/10 shadow-sm">
-              <Image
-                src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600"
+            <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F4EFE6] border border-[#C5A059]/10 shadow-sm group">
+              <img
+                src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80"
                 alt="Intricate linen flower hand embroidery detail"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-center group-hover:scale-102 transition-transform duration-700"
+                className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-102"
+                loading="lazy"
               />
             </div>
 

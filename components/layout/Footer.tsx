@@ -1,11 +1,38 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Leaf, ArrowRight } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) {
+      setStatus("error");
+      setMessage("Please enter an email address.");
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setStatus("error");
+      setMessage("Please enter a valid email address.");
+      return;
+    }
+
+    setStatus("loading");
+    setMessage("");
+
+    setTimeout(() => {
+      setStatus("success");
+      setMessage("Thank you! You have successfully subscribed to SAA Collection updates.");
+      setEmail("");
+    }, 1000);
+  };
 
   return (
     <footer className="bg-[#F4EFE6] border-t border-[#C5A059]/10 pt-16 pb-8 text-[#3B2F2F]">
@@ -77,23 +104,36 @@ export function Footer() {
               Subscribe to receive exclusive access to new collections and brand updates.
             </p>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubscribe}
               className="flex items-center border-b border-[#3B2F2F]/20 py-2 max-w-sm"
             >
               <input
                 type="email"
                 placeholder="Your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={status === "loading"}
                 className="w-full bg-transparent text-xs font-sans text-[#3B2F2F] placeholder-[#3B2F2F]/40 focus:outline-none py-1"
                 required
               />
               <button
                 type="submit"
-                className="p-1 text-[#3B2F2F] hover:text-[#C5A059] transition-colors"
+                disabled={status === "loading"}
+                className="p-1 text-[#3B2F2F] hover:text-[#C5A059] transition-colors disabled:opacity-40"
                 aria-label="Subscribe"
               >
                 <ArrowRight className="h-4 w-4" />
               </button>
             </form>
+            {message && (
+              <p
+                className={`text-[10px] mt-2 font-sans ${
+                  status === "error" ? "text-red-500" : "text-[#C5A059]"
+                }`}
+              >
+                {message}
+              </p>
+            )}
           </div>
         </div>
 

@@ -15,6 +15,7 @@ module.exports = {
           "gold-hover": "#B59049",
           olive: "#7E775B",
           "olive-hover": "#68624B",
+          rose: "#B39A8E",
           offwhite: "#F4EFE6",
           "offwhite-dark": "#EAE3D5",
         },

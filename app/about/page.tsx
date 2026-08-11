@@ -72,7 +72,7 @@ export default function AboutPage() {
             {/* Top Left: Vase / Flower details */}
             <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F4EFE6] border border-[#C5A059]/10 shadow-sm">
               <Image
-                src="https://images.unsplash.com/photo-1502810313894-7ba7897d4090?q=80&w=600"
+                src="https://images.unsplash.com/photo-1502810313894-0a631d82f508?auto=format&fit=crop&w=600&q=80"
                 alt="Gypsophila in Ceramic Vase detail"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

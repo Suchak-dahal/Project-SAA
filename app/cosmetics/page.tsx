@@ -63,7 +63,7 @@ export default function CosmeticsPage() {
       title: "Botanical Soap",
       price: 16,
       priceStr: "$16.00",
-      image: "https://images.unsplash.com/photo-1607006342411-9a336f56891c?q=80&w=600",
+      image: "https://images.unsplash.com/photo-1607006964201-2e5a1b647fd4?auto=format&fit=crop&w=600&q=80",
       description: "Gentle cleanse with natural botanicals",
       category: "Body Care",
     },

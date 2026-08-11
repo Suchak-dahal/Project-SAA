@@ -63,7 +63,7 @@ export default function ClothingPage() {
       title: "Olive Whisper Dress",
       price: 7190,
       priceStr: "NPR 7,190.00",
-      image: "https://images.unsplash.com/photo-1549064482-6779ba3292fe?q=80&w=600",
+      image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80",
       category: "Dresses",
       tags: ["Midi"],
       dateAdded: "2026-07-20",

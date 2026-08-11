@@ -189,13 +189,14 @@ export default function CosmeticsPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             
             {/* Title */}
-            <div className="text-center max-w-xl mx-auto mb-16">
-              <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold flex items-center justify-center gap-1.5 mb-2">
-                <Leaf className="h-3.5 w-3.5" />
-                <span>OUR NATURAL ESSENTIALS</span>
-                <Leaf className="h-3.5 w-3.5" />
-              </span>
-              <div className="h-[1px] w-20 bg-[#C5A059] mx-auto mt-4"></div>
+            <div className="text-center max-w-xl mx-auto mb-16 flex flex-col items-center justify-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Leaf className="h-4 w-4 text-[#C5A059] -rotate-45" />
+                <h2 className="font-serif text-2xl md:text-3xl text-[#3B2F2F] font-medium tracking-wide">
+                  Our Natural Essentials
+                </h2>
+                <Leaf className="h-4 w-4 text-[#C5A059] rotate-45" />
+              </div>
             </div>
 
             {/* Custom Cosmetics Grid matching ddd.jpeg */}
@@ -203,26 +204,26 @@ export default function CosmeticsPage() {
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="group relative flex flex-col w-full max-w-[220px] bg-[#F4EFE6] border border-transparent hover:border-[#C5A059]/10 p-3 pb-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-500"
+                  className="group relative flex flex-col w-full max-w-[200px] bg-[#F4EFE6] p-3 pb-8 rounded-xl transition-all duration-500"
                 >
                   {/* Product Image inside rounded-xl white frame */}
-                  <div className="relative aspect-[1/1] w-full bg-white rounded-xl overflow-hidden mb-4 border border-[#C5A059]/5">
+                  <div className="relative aspect-[1/1] w-full bg-white rounded-lg overflow-hidden mb-4">
                     <Image
                       src={product.image}
                       alt={product.title}
                       fill
                       sizes="(max-width: 640px) 50vw, 20vw"
-                      className="object-cover object-center p-2 group-hover:scale-105 transition-transform duration-700 ease-out"
+                      className="object-cover object-center p-3 group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                   </div>
 
                   {/* Title & Desc & Price centered */}
                   <div className="text-center flex-1 flex flex-col justify-between">
-                    <div>
-                      <h4 className="font-serif text-sm text-[#3B2F2F] font-semibold line-clamp-1 mb-1">
+                    <div className="mb-2">
+                      <h4 className="font-serif text-xs md:text-sm text-[#3B2F2F] font-medium line-clamp-1 mb-1">
                         {product.title}
                       </h4>
-                      <p className="text-[10px] text-[#3B2F2F]/60 font-sans leading-relaxed mb-3 line-clamp-2">
+                      <p className="text-[10px] text-[#3B2F2F]/60 font-sans leading-relaxed line-clamp-2">
                         {product.description}
                       </p>
                     </div>
@@ -234,10 +235,10 @@ export default function CosmeticsPage() {
                   {/* Plus Icon at bottom center */}
                   <button
                     onClick={() => handleQuickAdd(product)}
-                    className="absolute -bottom-4 left-1/2 -translate-x-1/2 z-10 flex h-8.5 w-8.5 items-center justify-center rounded-full bg-[#C5A059] text-white hover:bg-[#B59049] transition-all duration-300 shadow-md hover:scale-110 active:scale-95 cursor-pointer"
+                    className="absolute -bottom-4.5 left-1/2 -translate-x-1/2 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-[#C5A059] text-white hover:bg-[#B59049] transition-all duration-300 shadow-md hover:scale-110 active:scale-95 cursor-pointer"
                     aria-label="Add to cart"
                   >
-                    <Plus className="h-4.5 w-4.5" />
+                    <Plus className="h-5 w-5" />
                   </button>
                 </div>
               ))}
@@ -246,21 +247,21 @@ export default function CosmeticsPage() {
         </section>
 
         {/* Four-Pillars Value Section */}
-        <section className="border-t border-[#C5A059]/20 bg-[#F4EFE6]/40 py-16">
+        <section className="border-t border-[#C5A059]/15 bg-[#F4EFE6]/20 py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8 justify-items-center">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6 lg:gap-x-0 divide-y md:divide-y-0 lg:divide-x divide-[#C5A059]/15 justify-items-center">
               {pillars.map((pillar, idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col items-center text-center max-w-xs space-y-3"
+                  className="flex flex-col items-center text-center max-w-xs space-y-2.5 pt-6 md:pt-0 w-full px-4"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#C5A059]/10 text-[#C5A059]">
+                  <div className="text-[#C5A059] mb-1">
                     {pillar.icon}
                   </div>
-                  <h3 className="font-sans text-xs uppercase tracking-widest text-[#3B2F2F] font-semibold">
+                  <h3 className="font-sans text-[10px] uppercase tracking-[0.2em] text-[#3B2F2F] font-semibold">
                     {pillar.title}
                   </h3>
-                  <p className="text-xs text-[#3B2F2F]/70 leading-relaxed font-sans max-w-[200px]">
+                  <p className="text-[11px] text-[#3B2F2F]/70 leading-relaxed font-sans max-w-[180px]">
                     {pillar.desc}
                   </p>
                 </div>

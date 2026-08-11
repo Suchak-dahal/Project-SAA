@@ -173,6 +173,7 @@ export default function ClothingPage() {
                   src="/images/clothing_hero.png"
                   alt="Clothing Collection Campaign"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                   className="object-cover object-center scale-102 hover:scale-105 transition-transform duration-1000 ease-out"
                 />

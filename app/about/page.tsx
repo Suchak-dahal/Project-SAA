@@ -27,6 +27,7 @@ export default function AboutPage() {
             src="/images/about_hero.png"
             alt="SAA Collection Heritage Balcony Campaign"
             fill
+            sizes="100vw"
             priority
             className="object-cover object-center scale-102 hover:scale-105 transition-transform duration-1000 ease-out"
           />

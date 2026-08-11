@@ -98,14 +98,11 @@ export function ProductCard({
       </div>
 
       {/* Metadata */}
-      <div className="flex flex-1 flex-col p-4 md:p-5 bg-[#F4EFE6]">
-        <p className="text-[10px] uppercase tracking-widest text-[#C5A059] font-medium mb-1">
-          {category}
-        </p>
+      <div className="flex flex-1 flex-col items-center text-center p-4 md:p-5 bg-[#F4EFE6]">
         <h3 className="font-serif text-[#3B2F2F] text-sm md:text-base line-clamp-1 group-hover:text-[#C5A059] transition-colors duration-300 mb-2">
           {title}
         </h3>
-        <p className="mt-auto text-xs md:text-sm font-semibold text-[#3B2F2F] tracking-wide">
+        <p className="text-xs md:text-sm font-semibold text-[#3B2F2F] tracking-wide">
           {priceStr}
         </p>
       </div>

@@ -57,11 +57,16 @@ export function Navbar() {
             </div>
 
             {/* Center: Brand Logo */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-1.5 md:gap-2">
-              <Link href="/" className="flex items-center gap-1.5 md:gap-2 group">
-                <Leaf className="h-4 w-4 md:h-5 md:w-5 text-[#C5A059] rotate-45 group-hover:rotate-90 transition-transform duration-500" />
-                <span className="font-serif text-lg md:text-xl font-medium tracking-widest text-[#3B2F2F] uppercase whitespace-nowrap">
-                  SAA Collection
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+              <Link href="/" className="flex flex-col items-center group">
+                <div className="flex items-center justify-center">
+                  <span className="font-serif text-2xl md:text-3xl font-medium tracking-wide text-[#3B2F2F] leading-none transition-colors group-hover:text-[#C5A059]">
+                    SAA
+                  </span>
+                  <Leaf className="h-3.5 w-3.5 md:h-4 md:w-4 text-[#C5A059] rotate-45 ml-0.5 transition-transform duration-500 group-hover:rotate-90" />
+                </div>
+                <span className="font-sans text-[7px] md:text-[9px] font-medium uppercase tracking-[0.3em] text-[#3B2F2F]/90 -mt-0.5 md:mt-0 leading-none">
+                  COLLECTION
                 </span>
               </Link>
             </div>
